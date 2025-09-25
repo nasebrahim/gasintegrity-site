@@ -1,121 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gas Integrity Services — Export from China & USA to MENA</title>
-  <meta name="description" content="Exporting auto parts & industrial goods from China & USA to MENA markets with verified compliance and competitive CIF pricing."/>
+  <meta name="description" content="Exporter of auto parts & industrial goods from China & USA to MENA markets with verified compliance and competitive CIF pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root { --sea1:#7dd3fc; --sea2:#38bdf8; }
-    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-    /* Animated containers */
-    .marquee { position:absolute; left:0; right:0; display:flex; gap:1.25rem; }
-    .marquee-row1 { top:5rem; animation: slideLeft 28s linear infinite; }
-    .marquee-row2 { top:7.5rem; opacity:.8; animation: slideRight 32s linear infinite; }
-    @keyframes slideLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    @keyframes slideRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-    /* Bobbing ship */
-    .bob { animation: bob 6s ease-in-out infinite; }
-    @keyframes bob { 0%,100%{ transform: translate(-50%,0); } 50%{ transform: translate(-50%,-6px);} }
-    /* Parallax on scroll */
-    .parallax { will-change: transform; }
-    /* Arabic direction */
-    .rtl { direction: rtl; font-family: system-ui, -apple-system, Segoe UI, Tahoma, Cairo, sans-serif; }
+    :root { --brand:#0b1220; --brand-2:#0ea5e9; --gold:#f59e0b; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    .rtl { direction: rtl; font-family: Cairo, Inter, system-ui, -apple-system, Segoe UI, Tahoma, sans-serif; }
+    .hero-bg { position: relative; background: radial-gradient(1000px 400px at 30% 10%, rgba(14,165,233,0.18), transparent 60%), linear-gradient(180deg, #0b1220 0%, #0b1220 45%, #0f172a 100%); color: #fff; overflow: hidden; }
+    .cargo-silhouette { position:absolute; inset:auto -10% -6rem -10%; height: 28rem; opacity: .08; }
+    .card { background: white; border-radius: 1rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 16px rgba(0,0,0,.04); }
+    .card:hover { box-shadow: 0 10px 24px rgba(0,0,0,.08); transform: translateY(-2px); transition: .25s ease; }
+    .icon-circle { width: 40px; height: 40px; border-radius: 9999px; display:grid; place-items:center; background:#e0f2fe; color:#0369a1; }
+    .h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: .2px; }
+    .btn { display:inline-block; padding:.65rem 1rem; border-radius:.85rem; font-weight:600; }
+    .btn-primary { background:#0ea5e9; color:white; } .btn-primary:hover { background:#0284c7; }
+    .btn-ghost { background:white; color:#0b1220; border:1px solid #e5e7eb; } .btn-ghost:hover { background:#f8fafc; }
+    .btn-outline { border:1px solid #10b981; color:#065f46; background:#ecfdf5; } .btn-outline:hover { background:#d1fae5; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 1rem; }
   </style>
 </head>
 <body class="bg-white text-gray-900">
-  <!-- Nav -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+    <div class="container py-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="h-8 w-8 rounded-xl bg-black text-white grid place-items-center text-xs">GIS</div>
+        <div class="h-9 w-9 rounded-xl bg-black text-white grid place-items-center text-xs">GIS</div>
         <span class="text-lg font-semibold">Gas Integrity Services</span>
       </div>
       <div class="flex items-center gap-3">
         <button id="langBtn" class="text-sm px-3 py-2 rounded-lg hover:bg-gray-100">العربية</button>
-        <a href="#contact" class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800">Contact</a>
+        <a href="#contact" class="btn btn-primary">Contact</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-sky-100 via-sky-200 to-white"></div>
-    <div class="absolute -top-24 left-0 right-0 h-48 bg-gradient-to-b from-sky-200/60 to-transparent blur-2xl"></div>
+  <section class="hero-bg">
+    <svg class="cargo-silhouette" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <g fill="#fff">
+        <rect x="120" y="220" width="680" height="60" rx="8" />
+        <rect x="160" y="180" width="180" height="40" rx="6" />
+        <rect x="200" y="160" width="80" height="20" rx="4" />
+        <rect x="420" y="190" width="36" height="30" rx="3" />
+        <rect x="462" y="180" width="36" height="30" rx="3" />
+        <rect x="504" y="190" width="36" height="30" rx="3" />
+        <rect x="546" y="180" width="36" height="30" rx="3" />
+        <path d="M800 220 L900 220 L940 250 L800 250 Z" />
+      </g>
+    </svg>
 
-    <!-- Animated containers -->
-    <div class="marquee marquee-row1" aria-hidden="true">
-      <div class="flex">
-        <!-- repeat colorful boxes -->
-        ${Array.from({length:50}).map((_,i)=>`<div class="h-6 w-12 rounded shadow-sm" style="background:hsl(${(i*25)%360} 70% 55%);"></div>`).join('')}
-      </div>
-    </div>
-    <div class="marquee marquee-row2" aria-hidden="true">
-      <div class="flex">
-        ${Array.from({length:50}).map((_,i)=>`<div class="h-5 w-10 rounded shadow-sm" style="background:hsl(${(i*25+120)%360} 70% 50%);"></div>`).join('')}
-      </div>
-    </div>
-
-    <!-- Ship -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] max-w-none parallax bob" id="ship">
-      <svg viewBox="0 0 900 220" class="w-full" role="img" aria-label="Cargo ship">
-        <defs>
-          <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stop-color="#7dd3fc"/>
-            <stop offset="100%" stop-color="#38bdf8"/>
-          </linearGradient>
-        </defs>
-        <rect x="0" y="180" width="900" height="40" fill="url(#sea)"/>
-        <g>
-          <rect x="120" y="120" width="520" height="40" rx="6" fill="#1f2937"/>
-          <rect x="140" y="80" width="120" height="40" rx="4" fill="#334155"/>
-          <rect x="170" y="60" width="60" height="20" rx="2" fill="#94a3b8"/>
-          <!-- stacks -->
-          <g>
-            <rect x="300" y="100" width="26" height="30" rx="2" fill="#e11d48"/>
-            <rect x="330" y="90" width="26" height="30" rx="2" fill="#f59e0b"/>
-            <rect x="360" y="100" width="26" height="30" rx="2" fill="#22c55e"/>
-            <rect x="390" y="90" width="26" height="30" rx="2" fill="#3b82f6"/>
-            <rect x="420" y="100" width="26" height="30" rx="2" fill="#8b5cf6"/>
-            <rect x="450" y="90" width="26" height="30" rx="2" fill="#06b6d4"/>
-            <rect x="480" y="100" width="26" height="30" rx="2" fill="#f97316"/>
-            <rect x="510" y="90" width="26" height="30" rx="2" fill="#10b981"/>
-          </g>
-          <path d="M640 120 L700 120 L720 140 L640 140 Z" fill="#111827"/>
-          <!-- windows -->
-          <g fill="#e5e7eb">
-            <rect x="150" y="88" width="8" height="6" rx="1" />
-            <rect x="168" y="88" width="8" height="6" rx="1" />
-            <rect x="186" y="88" width="8" height="6" rx="1" />
-            <rect x="204" y="88" width="8" height="6" rx="1" />
-            <rect x="222" y="88" width="8" height="6" rx="1" />
-            <rect x="240" y="88" width="8" height="6" rx="1" />
-          </g>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Content -->
-    <div class="relative max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center" id="heroContent">
+    <div class="container py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center relative">
       <div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight" data-en="Your Bridge from China & USA to MENA Importers" data-ar="جسرك من الصين والولايات المتحدة إلى مستوردي الشرق الأوسط">Your Bridge from China & USA to MENA Importers</h1>
-        <p class="mt-4 text-gray-700" data-en="We export reliable auto parts & industrial goods with verified compliance and competitive CIF pricing." data-ar="نصدّر قطع غيار السيارات والمنتجات الصناعية باعتمادات موثوقة وتسعير CIF تنافسي.">We export reliable auto parts & industrial goods with verified compliance and competitive CIF pricing.</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight" data-en="Export from China & USA to MENA — Done Right" data-ar="تصدير من الصين والولايات المتحدة إلى الشرق الأوسط — باحتراف">Export from China & USA to MENA — Done Right</h1>
+        <p class="mt-4 text-sky-100/90 text-lg" data-en="Auto parts & industrial goods with verified compliance and market‑aligned CIF pricing." data-ar="قطع غيار السيارات والمنتجات الصناعية باعتمادات موثوقة وتسعير CIF مطابق للسوق.">Auto parts & industrial goods with verified compliance and market‑aligned CIF pricing.</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#contact" class="px-6 py-2 rounded-xl bg-black text-white hover:bg-gray-800">Request a Quote</a>
-          <a href="#categories" class="px-6 py-2 rounded-xl bg-white border hover:bg-gray-50">Product Categories</a>
-          <a href="https://wa.me/18322309668" target="_blank" rel="noopener noreferrer" class="px-6 py-2 rounded-xl border border-green-600 text-green-700 hover:bg-green-50">WhatsApp Us</a>
+          <a href="#contact" class="btn btn-primary">Request a Quote</a>
+          <a href="#categories" class="btn btn-ghost">Product Categories</a>
+          <a href="https://wa.me/18322309668" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp Us</a>
         </div>
-        <div class="mt-6 flex items-center gap-4 text-sm text-gray-600">
-          <div class="flex items-center gap-2">✅ <span data-en="Bilingual (EN/AR)" data-ar="دعم لغتين (ع/إن)">Bilingual (EN/AR)</span></div>
-          <div class="flex items-center gap-2">✅ <span data-en="Target‑CIF aligned" data-ar="أسعار CIF مستهدفة">Target‑CIF aligned</span></div>
-          <div class="flex items-center gap-2">✅ <span data-en="UN38.3/IEC aware" data-ar="مطابقة UN38.3/IEC">UN38.3/IEC aware</span></div>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-sky-100/90">
+          <div data-en="Bilingual (EN/AR)" data-ar="دعم لغتين (ع/إن)">Bilingual (EN/AR)</div>
+          <div data-en="Target‑CIF aligned" data-ar="أسعار CIF مستهدفة">Target‑CIF aligned</div>
+          <div data-en="UN38.3/IEC aware" data-ar="مطابقة UN38.3/IEC">UN38.3/IEC aware</div>
         </div>
       </div>
-      <div class="rounded-2xl border shadow-sm p-6 bg-white/80">
+      <div class="card p-6 bg-white/95">
         <div class="grid grid-cols-2 gap-4 text-sm">
           <div class="p-3 rounded-xl bg-gray-50">
             <div class="text-xs text-gray-500" data-en="Primary Lanes" data-ar="الوجهات الرئيسية">Primary Lanes</div>
@@ -138,52 +92,38 @@
     </div>
   </section>
 
-  <!-- Categories -->
   <section id="categories" class="bg-gray-50 border-y">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-semibold mb-6" data-en="Product Categories" data-ar="فئات المنتجات">Product Categories</h2>
+    <div class="container py-12">
+      <h2 class="h2 mb-6" data-en="Product Categories" data-ar="فئات المنتجات">Product Categories</h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        ${[
-          ["Batteries","بطاريات"],["Tires","إطارات"],["Spark Plugs","بواجي"],
-          ["Filters","فلاتر"],["Shock Absorbers","ممتصات صدمات"],["Power Tools","أدوات كهربائية"],
-          ["Solar & Inverters","طاقة شمسية ومحولات"]
-        ].map(([en,ar])=>`
-          <div class="rounded-2xl border p-5 bg-white hover:shadow-md transition">
-            <div class="text-base font-semibold">${en}</div>
-            <div class="text-sm text-gray-600 mt-1">Verified suppliers, export‑ready specs, and competitive CIF.</div>
-          </div>
-        `).join('')}
+        <div class="card p-5"><div class="icon-circle mb-3">🔋</div><div class="font-semibold">Batteries</div><div class="text-sm text-gray-600 mt-1">Automotive batteries, UN38.3 aware, reliable suppliers.</div></div>
+        <div class="card p-5"><div class="icon-circle mb-3">🛞</div><div class="font-semibold">Tires</div><div class="text-sm text-gray-600 mt-1">Passenger & light truck; competitive CIF corridors.</div></div>
+        <div class="card p-5"><div class="icon-circle mb-3">⚡️</div><div class="font-semibold">Spark Plugs</div><div class="text-sm text-gray-600 mt-1">OEM‑compatible, curated SKUs for MENA demand.</div></div>
+        <div class="card p-5"><div class="icon-circle mb-3">🧰</div><div class="font-semibold">Filters</div><div class="text-sm text-gray-600 mt-1">Oil, air, fuel; Toyota/Nissan/Hyundai core lines.</div></div>
+        <div class="card p-5"><div class="icon-circle mb-3">🛠️</div><div class="font-semibold">Shock Absorbers</div><div class="text-sm text-gray-600 mt-1">Durability‑first sourcing with QC checks.</div></div>
+        <div class="card p-5"><div class="icon-circle mb-3">🔌</div><div class="font-semibold">Power Tools</div><div class="text-sm text-gray-600 mt-1">Export‑ready specs, steady factory capacity.</div></div>
       </div>
     </div>
   </section>
 
-  <!-- Why Us -->
-  <section class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-semibold mb-6" data-en="Why Work With Us" data-ar="لماذا نحن؟">Why Work With Us</h2>
+  <section class="container py-12">
+    <h2 class="h2 mb-6" data-en="Why Work With Us" data-ar="لماذا نحن؟">Why Work With Us</h2>
     <div class="grid md:grid-cols-3 gap-4">
-      ${[
-        ["China & USA Sourcing","توريد من الصين والولايات المتحدة","Factory‑direct network and US export channels."],
-        ["Compliance Ready","جاهزية الامتثال","UN38.3/IEC aware; documentation aligned for import."],
-        ["Target‑CIF Pricing","تسعير CIF مستهدف","We quote to your market reality, not guesswork."]
-      ].map(([en,ar,sub])=>`
-        <div class="rounded-2xl border p-5 bg-white hover:shadow-sm">
-          <div class="text-base font-semibold">${en}</div>
-          <div class="text-sm text-gray-600 mt-2">${sub}</div>
-        </div>
-      `).join('')}
+      <div class="card p-5"><div class="icon-circle mb-3">🏭</div><div class="font-semibold">China & USA Sourcing</div><div class="text-sm text-gray-600 mt-1">Factory‑direct network and US export channels.</div></div>
+      <div class="card p-5"><div class="icon-circle mb-3">✅</div><div class="font-semibold">Compliance Ready</div><div class="text-sm text-gray-600 mt-1">UN38.3/IEC aware; documents aligned for import.</div></div>
+      <div class="card p-5"><div class="icon-circle mb-3">💹</div><div class="font-semibold">Target‑CIF Pricing</div><div class="text-sm text-gray-600 mt-1">Quoted to your market reality, not guesswork.</div></div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="bg-gray-50 border-t">
-    <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+    <div class="container py-12 grid md:grid-cols-2 gap-8">
       <div>
-        <h2 class="text-2xl font-semibold" data-en="Contact" data-ar="اتصل بنا">Contact</h2>
-        <p class="mt-2 text-gray-600" data-en="Send us your target CIF and port, we’ll revert in 24–48h." data-ar="أرسل CIF المستهدف والميناء، نرد خلال 48-24 ساعة.">Send us your target CIF and port, we’ll revert in 24–48h.</p>
+        <h2 class="h2" data-en="Contact" data-ar="اتصل بنا">Contact</h2>
+        <p class="mt-2 text-gray-600" data-en="Send your target CIF and port, we’ll reply in 24–48h." data-ar="أرسل CIF المستهدف والميناء، نرد خلال 48-24 ساعة.">Send your target CIF and port, we’ll reply in 24–48h.</p>
         <div class="mt-6 space-y-3 text-sm">
-          <div class="flex items-center gap-2">📞 <span>WhatsApp: <a class="underline" href="https://wa.me/18322309668" target="_blank" rel="noopener">+1‑832‑230‑9668</a></span></div>
-          <div class="flex items-center gap-2">✉️ <a class="underline" href="mailto:nasebrahim@gasintegrity.com">nasebrahim@gasintegrity.com</a></div>
-          <div class="flex items-center gap-2">🌐 <a class="underline" href="https://www.gasintegrity.com" target="_blank" rel="noopener">www.gasintegrity.com</a></div>
+          <div>📞 WhatsApp: <a class="underline" href="https://wa.me/18322309668" target="_blank" rel="noopener">+1‑832‑230‑9668</a></div>
+          <div>✉️ <a class="underline" href="mailto:nasebrahim@gasintegrity.com">nasebrahim@gasintegrity.com</a></div>
+          <div>🌐 <a class="underline" href="https://www.gasintegrity.com" target="_blank" rel="noopener">www.gasintegrity.com</a></div>
         </div>
         <div class="mt-6">
           <div class="text-xs text-gray-500 mb-2">WhatsApp QR</div>
@@ -193,14 +133,14 @@
           </div>
         </div>
       </div>
-      <div class="rounded-2xl border p-6 bg-white">
+      <div class="card p-6 bg-white">
         <form action="https://formspree.io/f/mayvlzge" method="POST" class="space-y-3">
           <input name="name" placeholder="Full Name" class="w-full rounded-xl border px-3 py-2" required />
           <input name="company" placeholder="Company" class="w-full rounded-xl border px-3 py-2" />
           <input name="whatsapp" placeholder="WhatsApp" class="w-full rounded-xl border px-3 py-2" />
           <input type="email" name="email" placeholder="Email" class="w-full rounded-xl border px-3 py-2" required />
           <textarea name="message" placeholder="Tell us product, port, target CIF …" class="w-full rounded-xl border px-3 py-2" rows="4"></textarea>
-          <button type="submit" class="w-full px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800">Send</button>
+          <button type="submit" class="w-full btn btn-primary">Send</button>
         </form>
         <p class="text-xs text-gray-500 mt-2">By submitting, you agree to be contacted via email/WhatsApp.</p>
       </div>
@@ -208,7 +148,7 @@
   </section>
 
   <footer class="border-t">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex items-center justify-between">
+    <div class="container py-8 text-sm text-gray-600 flex items-center justify-between">
       <div>© <span id="year"></span> Gas Integrity Services</div>
       <div class="flex gap-4">
         <a href="#categories" class="hover:underline">Products</a>
@@ -218,31 +158,17 @@
   </footer>
 
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Language toggle
-    const langBtn = document.getElementById('langBtn');
-    let rtl = false;
-    const setLang = (toAr) => {
-      rtl = toAr;
+    const langBtn = document.getElementById('langBtn'); let rtl = false;
+    const swap = () => {
       document.body.classList.toggle('rtl', rtl);
       langBtn.textContent = rtl ? 'English' : 'العربية';
-      // swap content for elements with data-en/ar
       document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = rtl ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+        const en = el.getAttribute('data-en'); const ar = el.getAttribute('data-ar');
+        if (en && ar) el.textContent = rtl ? ar : en;
       });
     };
-    langBtn.addEventListener('click', ()=> setLang(!rtl));
-
-    // Parallax on scroll
-    const ship = document.getElementById('ship');
-    const heroContent = document.getElementById('heroContent');
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      ship.style.transform = `translate(-50%, ${-y*0.05}px)`;
-      heroContent.style.transform = `translateY(${y*0.02}px)`;
-    });
+    langBtn.addEventListener('click', () => { rtl = !rtl; swap(); });
   </script>
 </body>
 </html>
