@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Video Debug</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{font-family:system-ui, Arial; padding:20px}</style>
+</head>
+<body>
+  <h1>Video Debug</h1>
+  <p>Below video has <code>controls</code>, <code>muted</code>, <code>playsinline</code>. If it doesn't play, we will print an error below.</p>
+  <video id="v" width="640" height="360" controls muted playsinline poster="/assets/ship-poster.jpg" preload="metadata">
+    <source src="/assets/ship-bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <pre id="log" style="background:#f3f4f6; padding:12px; border-radius:8px; margin-top:16px"></pre>
+  <script>
+    const v = document.getElementById('v');
+    const log = document.getElementById('log');
+    function write(msg){ log.textContent += msg + "\n"; }
+    function errName(code){
+      return ({1:'MEDIA_ERR_ABORTED',2:'MEDIA_ERR_NETWORK',3:'MEDIA_ERR_DECODE',4:'MEDIA_ERR_SRC_NOT_SUPPORTED'})[code]||'UNKNOWN';
+    }
+    write('canPlayType mp4 baseline/aac: ' + (v.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"') || '(empty)'));
+    v.addEventListener('loadeddata', ()=>write('loadeddata fired: OK — video has data'));
+    v.addEventListener('play', ()=>write('play event fired'));
+    v.addEventListener('error', ()=>{
+      const e = v.error;
+      if (e) write('error code: ' + e.code + ' ('+ errName(e.code) +')');
+      else write('error with no code');
+    });
+  </script>
+</body>
+</html>
